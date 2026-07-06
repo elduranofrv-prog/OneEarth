@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Frequency — anonymous global penpal radio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <main class="receiver">
+      <header class="dial">
+        <div class="dial-top">
+          <div class="brand">Frequency<small>anonymous penpal radio</small></div>
+          <div class="handle-badge" id="handle-badge">…</div>
+        </div>
+        <div class="freq-readout">
+          <span class="flags" id="dial-flags">📻</span>
+          <span class="status-text" id="dial-status">LINKING TOWER…</span>
+          <div class="signal-bars" id="signal-bars">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </header>
+
+      <section class="tuning-panel" id="tuning-panel">
+        <h1>Pick your station</h1>
+        <p>You'll show up as this flag. No names, no numbers, no accounts — just a random handle and whoever else is tuning in right now.</p>
+        <div class="country-grid" id="country-grid"></div>
+        <button class="btn btn-primary" id="find-btn" disabled>Scan for a stranger</button>
+      </section>
+
+      <section class="chat-view hidden" id="chat-view" style="display:flex; flex-direction:column; flex:1; min-height:0;">
+        <div class="transmission-log" id="transmission-log"></div>
+        <div class="typing-indicator" id="typing-indicator">receiving…</div>
+        <div class="control-deck">
+          <button class="icon-btn skip" id="skip-btn" title="Next frequency">⟳</button>
+          <input class="composer" id="composer" type="text" maxlength="1000" placeholder="Transmit a message…" disabled />
+          <button class="icon-btn send" id="send-btn" title="Send">➤</button>
+          <button class="icon-btn report" id="report-btn" title="Report">⚠</button>
+        </div>
+      </section>
+
+      <div class="footer-note" id="leave-row">
+        <button class="btn btn-ghost" id="leave-btn" style="font-size:10px; padding:8px 16px;">Go offline</button>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
